@@ -28,27 +28,30 @@ Output: [true,false,true]
 
 */
 
+#include<vector>
+
+using namespace std;
 
 class Solution {
 public:
-    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+    vector<bool> kidsWithCandies(vector<int> &candies, int extraCandies) {
         vector<bool> bools;
         int max = candies.front();
-        
+
         int candies_size = candies.size();
-        for(auto i = candies.begin(); i != candies.end(); ++i){
+        for (auto i = candies.begin(); i != candies.end(); ++i) {
             int suspect = *i;
-            if(suspect > max){
+            if (suspect > max) {
                 max = suspect;
             }
         }
-        
-        
-        for(auto i = candies.begin(); i != candies.end(); ++i){
-            bools.push_back(*i+extraCandies>=max);
+
+
+        for (auto i = candies.begin(); i != candies.end(); ++i) {
+            bools.push_back(*i + extraCandies >= max);
         }
-        
+
         return bools;
-        
+
     }
 };
