@@ -11,5 +11,6 @@ add_executable(cp_course
 #        a_o_c/exec.cpp
 #        a_o_c/exec2.cpp
 #        quick_sort/quick_sort.cpp
-        quick_sort/attempt_2.cpp
+#        quick_sort/attempt_2.cpp
+        quick_sort/attempt_3.cpp
         )
